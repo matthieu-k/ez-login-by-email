@@ -1,30 +1,24 @@
 <?php
 
-namespace MatthewkpEzLoginByEmailBundle\Security;
+namespace Matthewkp\EzLoginByEmailBundle\Security;
 
-use eZ\Publish\Core\MVC\Symfony\Security\Authentication\RepositoryAuthenticationProvider;
 use eZ\Publish\API\Repository\Exceptions\NotFoundException;
 use eZ\Publish\API\Repository\Repository;
 use eZ\Publish\Core\MVC\Symfony\Security\User as EzUser;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Facebook\Facebook;
 use Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider;
 
 /**
  * This provider is responsible for user authentication
  * eZ functionality is overridden here to be able to load the user additionally
  * via email address, or later load the user from different tree
- * Additionally the session id of anonymous user is stored in the session here
  *
- * Class AuthenticationProvider
+ * Class RepositoryAuthenticationProvider
  */
-class AuthenticationProvider extends DaoAuthenticationProvider
+class RepositoryAuthenticationProvider extends DaoAuthenticationProvider
 {
-    const SES_ANONYMOUS_SESSION_ID = 'sesAnonymousSessionId';
-
     /**
      * @var \eZ\Publish\API\Repository\Repository $repository
      */
@@ -41,9 +35,7 @@ class AuthenticationProvider extends DaoAuthenticationProvider
     }
 
     /**
-     * override the eZ functionality to fetch user additionally by email address
-     * if the user was authenticated successfully the session id of anonymous user
-     * is stored in the session for later purposes
+     * Override checkAuthentication function
      *
      * @param UserInterface $user
      * @param UsernamePasswordToken $token

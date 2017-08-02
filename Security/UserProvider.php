@@ -1,6 +1,6 @@
 <?php
 
-namespace MatthewkpEzLoginByEmailBundle\Security;
+namespace Matthewkp\EzLoginByEmailBundle\Security;
 
 use eZ\Publish\Core\MVC\Symfony\Security\User\Provider;
 use eZ\Publish\Core\MVC\Symfony\Security\User;
