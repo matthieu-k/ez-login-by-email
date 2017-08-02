@@ -6,7 +6,7 @@ Tested on eZ Platform version 1.10, it should work since eZ Platform 1.
 ```bash
 composer require matthewkp/ez-login-by-email
 ```
-## Register Bundle
+composer require matthewkp/ez-login-by-email
 ```php
 // app/AppKernel.php
 
@@ -24,3 +24,7 @@ class AppKernel extends Kernel
         ...
     }
 }
+
+## More information
+Initially made by https://github.com/eab-dev/LoginByEmailBundle
+
