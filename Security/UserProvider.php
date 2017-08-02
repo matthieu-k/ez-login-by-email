@@ -17,7 +17,6 @@ use eZ\Publish\API\Repository\Exceptions\NotFoundException;
  */
 class UserProvider extends Provider
 {
-
     /**
      * override the eZ functionality to fetch user by username or additionally email address
      * $user can be either the username/email or an instance of \eZ\Publish\Core\MVC\Symfony\Security\User
