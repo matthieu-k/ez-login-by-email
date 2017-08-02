@@ -1,0 +1,4 @@
+parameters:
+    # Setting to true the login will be available only by email TODO
+    loginOnlyByEmail: false
+
