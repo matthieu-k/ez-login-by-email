@@ -12,13 +12,12 @@ use eZ\Publish\API\Repository\Exceptions\NotFoundException;
  * This provider is responsible for loading the user from eZ
  * eZ functionality is overridden here to be able to load user additionally via email address
  *
- *
  * Class UserProvider
  */
 class UserProvider extends Provider
 {
     /**
-     * override the eZ functionality to fetch user by username or additionally email address
+     * Override the eZ functionality to fetch user by username or additionally email address
      * $user can be either the username/email or an instance of \eZ\Publish\Core\MVC\Symfony\Security\User
      *
      * @param string|\eZ\Publish\Core\MVC\Symfony\Security\User $user

@@ -1,6 +1,6 @@
 {
     "name" : "matthewkp/ez-login-by-email",
-    "description" : "With this bundle users will be able to login with their email or login.",
+    "description" : "Enables login by email or login on eZ Platform.",
     "keywords" : ["ezpublish", "ezplatform", "login", "email"],
     "homepage" : "https://github.com/matthewkp/ez-login-by-email",
     "authors": [
